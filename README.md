@@ -55,13 +55,13 @@
 
 ## delivery_addresses テーブル
 
-| Column           | Type       | Options                        |
-| ---------------- | ---------- | ------------------------------ |
-| postal_code      | string     | null: false |
-| prefecture_id    | integer    | null: false |
-| city             | string     | null: false |
-| street_number    | string     | null: false |
-| building         | string     |             |
+| Column              | Type       | Options                        |
+| ------------------- | ---------- | ------------------------------ |
+| postal_code         | string     | null: false |
+| prefecture_id       | integer    | null: false |
+| city                | string     | null: false |
+| street_number       | string     | null: false |
+| building            | string     |             |
 | purchase_history    | string     | null: false |
 
 ### Association
