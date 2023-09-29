@@ -15,32 +15,31 @@
 ### Association
 
 - has_many :items
-- has_many :delivery addresses
+- has_many :delivery_addresses
 
 ## items テーブル
 
 | Column                 | Type       | Options                            |
 | ---------------------- | ---------- | ---------------------------------- |
-| image                  | string     | null: false                        |
-| item                   | text       | null: false                        |
-| item_description       | string     | null: false                        |
-| category               | string     | null: false                        |
+| item                   | string     | null: false                        |
+| item_description       | text       | null: false                        |
+| category_id            | integer    | null: false                        |
 | item_condition         | string     | null: false                        |
 | postage                | string     | null: false                        |
 | prefecture_id          | string     | null: false                        |
 | delivery_time          | datetime   | null: false                        |
-| price                  | float      | null: false                        |
-| user_id                | references | null: false, foreign_key: true     |
+| price                  | integer    | null: false                        |
+| user                   | references | null: false, foreign_key: true     |
 
 
 ### Association
 
 - belongs_to :user
-- has_one :purchase history
+- has_one :purchase_history
 
 
 
-## purchase_history テーブル
+## purchase_histories テーブル
 
 | Column    | Type       | Options                        |
 | --------- | ---------- | ------------------------------ |
@@ -51,7 +50,7 @@
 
 - belongs_to :user
 - belongs_to :item
-- has_one :delivery_addresses
+- has_one :delivery_address
 
 ## delivery_addresses テーブル
 
@@ -63,8 +62,6 @@
 | street_number    | string     | null: false |
 | building         | string     |             |
 | phone_number     | string     | null: false |
-| user_id          | references | null: false, foreign_key: true |
-| item_id          | references | null: false, foreign_key: true |
 
 ### Association
 
